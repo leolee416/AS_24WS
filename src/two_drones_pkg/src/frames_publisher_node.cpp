@@ -9,7 +9,7 @@ class FramesPublisherNode{
 
  ros::Timer heartbeat;
  // *** FILL IN *** instantiate a transform broadcaster...
- static tf::TransformBroadcaster br;
+ tf::TransformBroadcaster br;
 
  public:
   FramesPublisherNode(){
@@ -31,7 +31,7 @@ class FramesPublisherNode{
     //   - use the - operator between ros::Time::now() and startup_time
     //   - convert the resulting Duration to seconds, store result into a double
 
-    double time = (ros::Time::now()- startup_time).tosec();
+    double time = (ros::Time::now()- startup_time).toSec();
 
     // Here we declare two tf::Transform objects, which need to be populated
     tf::Transform AV1World(tf::Transform::getIdentity());

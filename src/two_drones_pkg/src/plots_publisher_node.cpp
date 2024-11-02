@@ -53,7 +53,9 @@ class PlotsPublisherNode{
           *       a small wait time.
           * 
           */
-         parent->tf_listener.waitForTransform(ref_frame, dest_frame, ros::Time(0), ros::Duration(0.5)); // Time stampe ros::Time(0) stands for aquiring the current avaliable transform
+
+         
+         parent->tf_listener.waitForTransform(ref_frame, dest_frame, ros::Time(0), ros::Duration(0.1)); // Time stampe ros::Time(0) stands for aquiring the current avaliable transform
          parent->tf_listener.lookupTransform(ref_frame, dest_frame,  ros::Time(0), transform);
 
          // ~~~~~~~~~~~~~~~~~~~~~~~~  END OF EDIT SECTION  ~~~~~~~~~~~~~~~~~~~~~~~~~
